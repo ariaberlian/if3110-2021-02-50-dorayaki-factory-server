@@ -50,3 +50,17 @@ Content-Type: application/json
     "stok" : 250
 }
 
+###
+POST http://localhost:3000/tambah-resep
+Content-Type: application/json
+
+{
+    "nama_resep" : "Rasa Pasir",
+    "bahan_baku" : [
+        "Terigu", "Gula", "Pasir"
+    ],
+    "jumlah" : [
+        2, 3, 5
+    ]
+}
+

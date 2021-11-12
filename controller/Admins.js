@@ -9,7 +9,7 @@ export const getAdmins = async(req, res) => {
         });
         res.json(admins);
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 }
 
@@ -26,7 +26,7 @@ export const Register = async(req, res) => {
         });
         res.json({msg: "Register Berhasil"});
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 }
 

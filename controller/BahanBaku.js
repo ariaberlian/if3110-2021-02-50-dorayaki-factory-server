@@ -5,7 +5,7 @@ export const getBahanBaku = async(req,res) => {
         const bahan_baku = await BahanBaku.findAll();
         res.json(bahan_baku);
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 }
 
@@ -18,7 +18,7 @@ export const addBahanBaku = async(req,res) => {
         });
         res.json({msg: "Penambahan bahan baku berhasil"});
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 }
 
@@ -33,6 +33,6 @@ export const updateStokBahanBaku = async(req,res) => {
         });
         res.json({msg: "Pengubahan stok bahan baku berhasil"});
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 }

@@ -1,13 +1,16 @@
-1. buat fitur manajemen bahan baku:
+1. test fitur manajemen resep
     a. read
     b. create
-    c. update
-
-2. buat fitur manajemen resep
-    a. read
-    b. create
+2. test fitur manajemen bahan baku
+    a.create
+    b.read
+    c.update
+Kasus kegagalan belum ditangani
 
 3. buat tabel db request toko & log request toko
+
 4. buat fitur add stok management
     a. read
     b. acc/reject
+    
+5. bikin email notif
