@@ -28,3 +28,25 @@ DELETE http://localhost:3000/logout
 
 ###
 GET http://localhost:3000/token
+
+###
+GET http://localhost:3000/bahan-baku
+
+###
+POST http://localhost:3000/add-bahan-baku
+Content-Type: application/json
+
+{
+    "nama_bahan" : "Terigu",
+    "stok" : 100
+}
+
+###
+POST http://localhost:3000/update-bahan-baku
+Content-Type: application/json
+
+{
+    "nama_bahan" : "Terigu",
+    "stok" : 250
+}
+

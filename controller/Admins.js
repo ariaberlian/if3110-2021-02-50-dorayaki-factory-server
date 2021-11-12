@@ -14,7 +14,6 @@ export const getAdmins = async(req, res) => {
 }
 
 export const Register = async(req, res) => {
-    console.log(req.body);
     const { username, email, password, confPassword } = req.body;
     if(password !== confPassword) return res.status(400).json({msg: "Password dan Confirm Password tidak cocok"});
     const salt = await bcrypt.genSalt();
@@ -43,7 +42,7 @@ export const Login = async(req, res) => {
         const username = admin[0].username;
         const email = admin[0].email;
         const accessToken = jwt.sign({username, email}, process.env.ACCESS_TOKEN_SECRET,{
-            expiresIn: '60s'
+            expiresIn: '20s'
         });
         const refreshToken = jwt.sign({username, email}, process.env.REFRESH_TOKEN_SECRET,{
             expiresIn: '1d'

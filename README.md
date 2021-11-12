@@ -1,5 +1,5 @@
 ## Dorayaki Factory Server (REST)
-"Sebuah server untuk manajemen pabrik dorayaki DORAEMONANGIS"
+*Sebuah server untuk manajemen pabrik dorayaki DORAEMONANGIS*
 
 # Skema Basis Data
 1. resep = (id_resep, nama_resep) primary key (id_resep)
@@ -12,9 +12,14 @@ Foreign key :
 bahan_resep (id_resep) -> resep (id_resep)
 bahan_resep (bahan_baku) -> bahan_baku (nama_bahan)
 
-# Endpoint
-# Payload
-# response API
+# Endpoints, payload, responseAPI
+*apa sih ini*
+POST body:{username, password} -> '/login' -> {accessToken}, cookie httponly / {msg: "Username atau password salah"}
+GET header:authorization bearer; body:accessToken -> '/admins' -> {username, email}
+POST body:{username, email, password, confPassword} -> '/admins' -> {msg: "Register Berhasil"} / {msg: "Password dan Confirm Password tidak cocok"}
+DELETE -> '/logout' -> clear cookie & clear refresh_token
+GET -> '/token' -> {accessToken}
+
 # Pembagian Tugas
 1. Basisdata
 2. Authentification & Authorization

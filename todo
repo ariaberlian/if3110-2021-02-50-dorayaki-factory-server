@@ -1,0 +1,13 @@
+1. buat fitur manajemen bahan baku:
+    a. read
+    b. create
+    c. update
+
+2. buat fitur manajemen resep
+    a. read
+    b. create
+
+3. buat tabel db request toko & log request toko
+4. buat fitur add stok management
+    a. read
+    b. acc/reject
