@@ -1,0 +1,30 @@
+
+###
+GET http://localhost:3000/admins
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZGFuZyIsImVtYWlsIjoiZGFkYW5nQGdtYWlsLmNvbSIsImlhdCI6MTYzNjcxMTA2MCwiZXhwIjoxNjM2NzExMTIwfQ.teLezsIWIVdV8EQdbfwBbwVYX9xMln4kwW_WGRRr2vs
+
+###
+POST http://localhost:3000/admins
+Content-Type: application/json
+
+{
+    "username":"dadang",
+    "email":"dadang@gmail.com",
+    "password":"gantengpisan",
+    "confPassword":"gantengpisan"
+}
+
+###
+POST  http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username" : "dadang",
+    "password" : "gantengpisan"
+}
+
+###
+DELETE http://localhost:3000/logout
+
+###
+GET http://localhost:3000/token
