@@ -14,3 +14,5 @@ Kasus kegagalan belum ditangani
     b. acc/reject
     
 5. bikin email notif
+
+6. indexing id_resep di tabel bahan_resep
