@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2021 at 10:51 AM
+-- Generation Time: Nov 16, 2021 at 12:30 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `dorayaki_factory`
 --
+CREATE DATABASE IF NOT EXISTS `dorayaki_factory` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `dorayaki_factory`;
 
 -- --------------------------------------------------------
 
@@ -85,6 +87,33 @@ INSERT INTO `bahan_resep` (`id_resep`, `bahan_baku`, `jumlah`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `log_request`
+--
+
+CREATE TABLE `log_request` (
+  `id_log` int(11) NOT NULL,
+  `ip` text NOT NULL,
+  `endpoint` text NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp(),
+  `status` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `request_toko`
+--
+
+CREATE TABLE `request_toko` (
+  `id_request` int(11) NOT NULL,
+  `varian` varchar(255) NOT NULL,
+  `jumlah_penambahan` int(11) NOT NULL,
+  `status` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `resep`
 --
 
@@ -119,6 +148,18 @@ ALTER TABLE `bahan_resep`
   ADD KEY `fk_bahan_baku` (`bahan_baku`);
 
 --
+-- Indexes for table `log_request`
+--
+ALTER TABLE `log_request`
+  ADD PRIMARY KEY (`id_log`);
+
+--
+-- Indexes for table `request_toko`
+--
+ALTER TABLE `request_toko`
+  ADD PRIMARY KEY (`id_request`);
+
+--
 -- Indexes for table `resep`
 --
 ALTER TABLE `resep`
@@ -128,6 +169,18 @@ ALTER TABLE `resep`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `log_request`
+--
+ALTER TABLE `log_request`
+  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `request_toko`
+--
+ALTER TABLE `request_toko`
+  MODIFY `id_request` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `resep`
