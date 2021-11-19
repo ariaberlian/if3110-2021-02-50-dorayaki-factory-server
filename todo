@@ -5,14 +5,12 @@
     a.create
     b.read
     c.update
-Kasus kegagalan belum ditangani
 
-3. buat tabel db request toko & log request toko
-
-4. buat fitur add stok management
+3. test fitur add stok management
     a. read
     b. acc/reject
     
-5. bikin email notif
+4. isi link body email
 
-6. indexing id_resep di tabel bahan_resep
+Kasus kegagalan belum ditangani
+

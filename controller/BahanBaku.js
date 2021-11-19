@@ -24,7 +24,6 @@ export const addBahanBaku = async(req,res) => {
 
 export const updateStokBahanBaku = async(req,res) => {
     const {nama_bahan, stok} = req.body; 
-    console.log(stok);
     try {
         await BahanBaku.update({stok: stok},{
             where:{

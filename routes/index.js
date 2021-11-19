@@ -4,6 +4,9 @@ import { verifyToken } from "../middleware/VerifyToken.js";
 import { refreshToken } from "../controller/RefreshToken.js";
 import { getBahanBaku,addBahanBaku, updateStokBahanBaku } from "../controller/BahanBaku.js";
 import { addResep, getBahanResep, getResep } from "../controller/Resep.js";
+import {main} from "../middleware/Nodemailer.js"
+import { addRequestToko, getRequest, getRequestToko, updateRequestStatus } from "../controller/RequestToko.js";
+
 const router = express.Router();
 
 router.get('/admins', verifyToken, getAdmins);
@@ -17,6 +20,12 @@ router.post('/update-bahan-baku', updateStokBahanBaku);
 router.get('/resep', getResep);
 router.get('/bahan-resep', getBahanResep);
 router.post('/tambah-resep', addResep);
+router.get('/request', getRequest);
+router.get('/request-toko', getRequestToko);
+router.post('/add-request-toko', addRequestToko);
+router.post('/update-request-status', updateRequestStatus);
+
+
 
 router.get('/', (req,res)=>res.send("Welcome Brader.. Jayen will sing for you <br>"+ `<iframe width="560" height="315" src="https://www.youtube.com/embed/YttA4FPAYuQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`));
 
