@@ -4,7 +4,6 @@ import { verifyToken } from "../middleware/VerifyToken.js";
 import { refreshToken } from "../controller/RefreshToken.js";
 import { getBahanBaku,addBahanBaku, updateStokBahanBaku } from "../controller/BahanBaku.js";
 import { addResep, getBahanResep, getResep } from "../controller/Resep.js";
-import {main} from "../middleware/Nodemailer.js"
 import { addRequestToko, getRequest, getRequestToko, updateRequestStatus } from "../controller/RequestToko.js";
 
 const router = express.Router();
