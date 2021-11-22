@@ -13,16 +13,16 @@ router.post('/admins', Register);
 router.post('/login', Login);
 router.get('/token', refreshToken);
 router.delete('/logout', Logout);
-router.get('/bahan-baku', getBahanBaku);
-router.post('/add-bahan-baku', addBahanBaku);
-router.post('/update-bahan-baku', updateStokBahanBaku);
+router.get('/bahan-baku', verifyToken,getBahanBaku);
+router.post('/add-bahan-baku', verifyToken, addBahanBaku);
+router.post('/update-bahan-baku', verifyToken, updateStokBahanBaku);
 router.get('/resep', getResep);
-router.get('/bahan-resep', getBahanResep);
-router.post('/tambah-resep', addResep);
-router.get('/request', getRequest);
+router.get('/bahan-resep', verifyToken, getBahanResep);
+router.post('/tambah-resep', verifyToken, addResep);
+router.get('/request', verifyToken, getRequest);
 router.get('/request-toko', getRequestToko);
 router.post('/add-request-toko', addRequestToko);
-router.post('/update-request-status', updateRequestStatus);
+router.post('/update-request-status', verifyToken, updateRequestStatus);
 
 
 

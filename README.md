@@ -13,12 +13,12 @@ bahan_resep (id_resep) -> resep (id_resep)
 bahan_resep (bahan_baku) -> bahan_baku (nama_bahan)
 
 # Endpoints, payload, responseAPI
-POST body:{username, password} -> '/login' -> {accessToken}, cookie httponly / {msg: "Username atau password salah"}
-GET header:authorization bearer; body:accessToken -> '/admins' -> {username, email}
-POST body:{username, email, password, confPassword} -> '/admins' -> {msg: "Register Berhasil"} / {msg: "Password dan Confirm Password tidak cocok"}
-DELETE -> '/logout' -> clear cookie & clear refresh_token
-GET -> '/token' -> {accessToken}
-
+1. POST body:{username, password} -> '/login' -> {accessToken}, cookie httponly / {msg: "Username atau password salah"}
+2. GET header:authorization bearer accessToken -> '/admins' -> {username, email}
+3. POST body:{username, email, password, confPassword} -> '/admins' -> {msg: "Register Berhasil"} / {msg: "Password dan Confirm Password tidak cocok"}
+4. DELETE -> '/logout' -> clear cookie & clear refresh_token
+5. GET -> '/token' -> {accessToken}
+6. 
 # Pembagian Tugas
 1. Basisdata
 2. Authentification & Authorization
