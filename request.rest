@@ -1,7 +1,7 @@
 
 ###
 GET http://localhost:3000/admins
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZGFuZyIsImVtYWlsIjoiZGFkYW5nQGdtYWlsLmNvbSIsImlhdCI6MTYzNjcxMTA2MCwiZXhwIjoxNjM2NzExMTIwfQ.teLezsIWIVdV8EQdbfwBbwVYX9xMln4kwW_WGRRr2vs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZGFuZyIsImVtYWlsIjoiZGFkYW5nQGdtYWlsLmNvbSIsImlhdCI6MTYzNzc2MTA5MCwiZXhwIjoxNjM3NzYxMTA1fQ.0bWBWLb9FjDW32SlI4tZBATyU-FRcWldx-pyn0VOzAk
 
 ###
 POST http://localhost:3000/admins

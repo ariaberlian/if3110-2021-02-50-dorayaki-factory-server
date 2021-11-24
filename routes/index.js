@@ -13,7 +13,7 @@ router.post('/admins', Register);
 router.post('/login', Login);
 router.get('/token', refreshToken);
 router.delete('/logout', Logout);
-router.get('/bahan-baku', verifyToken,getBahanBaku);
+router.get('/bahan-baku', verifyToken, getBahanBaku);
 router.post('/add-bahan-baku', verifyToken, addBahanBaku);
 router.post('/update-bahan-baku', verifyToken, updateStokBahanBaku);
 router.get('/resep', getResep);

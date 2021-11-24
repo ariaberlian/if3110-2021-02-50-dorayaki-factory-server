@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2021 at 12:38 PM
+-- Generation Time: Nov 24, 2021 at 03:03 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `dorayaki_factory`
 --
-CREATE DATABASE IF NOT EXISTS `dorayaki_factory` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `dorayaki_factory`;
 
 -- --------------------------------------------------------
 
@@ -41,7 +39,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`username`, `password`, `email`, `refresh_token`) VALUES
-('dadang', '$2b$10$g8Lr4ZN5nUhOrAHGh0KX.O4qe9KGUy6HOIMaa2vpwyJY8IgtH8wZi', 'dadang@gmail.com', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZGFuZyIsImVtYWlsIjoiZGFkYW5nQGdtYWlsLmNvbSIsImlhdCI6MTYzNjcyOTcyMywiZXhwIjoxNjM2ODE2MTIzfQ.T5Hzd2vrboqcQjApBT8vDAFm7S7puuVR3XQiqqCN4r0');
+('dadang', '$2b$10$g8Lr4ZN5nUhOrAHGh0KX.O4qe9KGUy6HOIMaa2vpwyJY8IgtH8wZi', 'dadang@gmail.com', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZGFuZyIsImVtYWlsIjoiZGFkYW5nQGdtYWlsLmNvbSIsImlhdCI6MTYzNzc2MTA1MiwiZXhwIjoxNjM3ODQ3NDUyfQ.M5DfhYIoWZoqcj1geGvUqo3Tjubv7_y38RMFZXoKcvw');
 
 -- --------------------------------------------------------
 
@@ -94,9 +92,88 @@ CREATE TABLE `log_request` (
   `id_log` int(11) NOT NULL,
   `ip` text NOT NULL,
   `endpoint` text NOT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT current_timestamp(),
-  `status` tinyint(1) DEFAULT NULL
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `log_request`
+--
+
+INSERT INTO `log_request` (`id_log`, `ip`, `endpoint`, `timestamp`) VALUES
+(1, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 19:49:58'),
+(2, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 19:51:55'),
+(3, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 19:52:37'),
+(4, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 19:54:29'),
+(5, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 19:55:01'),
+(6, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 19:55:03'),
+(7, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 19:55:03'),
+(8, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 19:55:04'),
+(9, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 19:55:05'),
+(10, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 19:55:06'),
+(11, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 19:55:07'),
+(12, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 19:55:08'),
+(13, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 19:55:09'),
+(14, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 19:55:09'),
+(15, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 19:59:21'),
+(16, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 19:59:48'),
+(17, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:02:46'),
+(18, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:04:12'),
+(19, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:11:54'),
+(20, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:13:18'),
+(21, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:40:07'),
+(22, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:40:54'),
+(23, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:50:01'),
+(24, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:51:06'),
+(25, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:51:24'),
+(26, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:51:53'),
+(27, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 20:51:53'),
+(28, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:53:09'),
+(29, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:54:10'),
+(30, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:54:25'),
+(31, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 20:54:25'),
+(32, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:54:34'),
+(33, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 20:54:34'),
+(34, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:54:40'),
+(35, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 20:54:40'),
+(36, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:54:49'),
+(37, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 20:54:49'),
+(38, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:54:57'),
+(39, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 20:54:58'),
+(40, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:55:02'),
+(41, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 20:55:02'),
+(42, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:55:07'),
+(43, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 20:55:07'),
+(44, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:55:11'),
+(45, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 20:55:12'),
+(46, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:55:15'),
+(47, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 20:55:15'),
+(48, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:55:19'),
+(49, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 20:55:19'),
+(50, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:55:23'),
+(51, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 20:55:23'),
+(52, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 20:55:32'),
+(53, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 20:55:32'),
+(54, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 21:00:48'),
+(55, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 21:02:38'),
+(56, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 21:02:48'),
+(57, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 21:02:56'),
+(58, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 21:02:56'),
+(59, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 21:03:04'),
+(60, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 21:03:04'),
+(61, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 21:03:08'),
+(62, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 21:03:08'),
+(63, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 21:03:11'),
+(64, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 21:03:11'),
+(65, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 21:03:13'),
+(66, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 21:03:13'),
+(67, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 21:03:15'),
+(68, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 21:03:15'),
+(69, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 21:03:17'),
+(70, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 21:03:17'),
+(71, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 21:03:18'),
+(72, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 21:03:18'),
+(73, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 21:03:21'),
+(74, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 21:03:21');
 
 -- --------------------------------------------------------
 
@@ -106,10 +183,40 @@ CREATE TABLE `log_request` (
 
 CREATE TABLE `request_toko` (
   `id_request` int(11) NOT NULL,
+  `ip` text NOT NULL,
   `varian` varchar(255) NOT NULL,
   `jumlah_penambahan` int(11) NOT NULL,
   `status` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `request_toko`
+--
+
+INSERT INTO `request_toko` (`id_request`, `ip`, `varian`, `jumlah_penambahan`, `status`) VALUES
+(1, '192.168.1.4', 'Rasa Pasir', 20, 0),
+(2, '::1', 'Rasa Pasir', 20, NULL),
+(3, '::1', 'Rasa Pasir', -90, NULL),
+(4, '::1', 'Rasa Pasir', 23, NULL),
+(5, '::1', 'Rasa Pasir', 135, NULL),
+(6, '::1', 'Rasa Pasir', 0, NULL),
+(7, '::1', 'Rasa Pasir', 32, NULL),
+(8, '::1', 'Rasa Pasir', -50, NULL),
+(9, '::1', 'Rasa Pasir', -40, NULL),
+(10, '::1', 'Rasa Pasir', -30, NULL),
+(11, '::1', 'Rasa Pasir', 224, NULL),
+(12, '::1', 'Rasa Pasir', 245, NULL),
+(13, '::1', 'Rasa Pasir', 123000, NULL),
+(14, '::1', 'Rasa Pasir', 224, NULL),
+(15, '::1', 'Rasa Pasir', 20, NULL),
+(16, '::1', 'Rasa Pasir', 1100, NULL),
+(17, '::1', 'Rasa Pasir', 2000, NULL),
+(18, '::1', 'Rasa Pasir', 3000, NULL),
+(19, '::1', 'Rasa Pasir', 4000, NULL),
+(20, '::1', 'Rasa Pasir', 2000, NULL),
+(21, '::1', 'Rasa Pasir', 3000, NULL),
+(22, '::1', 'Rasa Pasir', 1000, NULL),
+(23, '::1', 'Rasa Pasir', 3000, NULL);
 
 -- --------------------------------------------------------
 
@@ -175,13 +282,13 @@ ALTER TABLE `resep`
 -- AUTO_INCREMENT for table `log_request`
 --
 ALTER TABLE `log_request`
-  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- AUTO_INCREMENT for table `request_toko`
 --
 ALTER TABLE `request_toko`
-  MODIFY `id_request` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_request` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `resep`
