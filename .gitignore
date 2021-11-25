@@ -1,1 +1,3 @@
-node_modules/
+
+#depedencies
+/node_modules
