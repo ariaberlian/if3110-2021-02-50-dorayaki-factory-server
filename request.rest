@@ -1,10 +1,10 @@
 
 ###
-GET http://localhost:3000/admins
+GET http://localhost:5000/admins
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZGFuZyIsImVtYWlsIjoiZGFkYW5nQGdtYWlsLmNvbSIsImlhdCI6MTYzNzc2MTA5MCwiZXhwIjoxNjM3NzYxMTA1fQ.0bWBWLb9FjDW32SlI4tZBATyU-FRcWldx-pyn0VOzAk
 
 ###
-POST http://localhost:3000/admins
+POST http://localhost:5000/admins
 Content-Type: application/json
 
 {
@@ -15,7 +15,7 @@ Content-Type: application/json
 }
 
 ###
-POST  http://localhost:3000/login
+POST  http://localhost:5000/login
 Content-Type: application/json
 
 {
@@ -24,16 +24,16 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/logout
+DELETE http://localhost:5000/logout
 
 ###
-GET http://localhost:3000/token
+GET http://localhost:5000/token
 
 ###
-GET http://localhost:3000/bahan-baku
+GET http://localhost:5000/bahan-baku
 
 ###
-POST http://localhost:3000/add-bahan-baku
+POST http://localhost:5000/add-bahan-baku
 Content-Type: application/json
 
 {
@@ -42,7 +42,7 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:3000/update-bahan-baku
+POST http://localhost:5000/update-bahan-baku
 Content-Type: application/json
 
 {
@@ -51,7 +51,7 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:3000/tambah-resep
+POST http://localhost:5000/tambah-resep
 Content-Type: application/json
 
 {
@@ -65,10 +65,10 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/resep
+GET http://localhost:5000/resep
 
 ###
-POST http://localhost:3000/update-request-status
+POST http://localhost:5000/update-request-status
 Content-Type: application/json
 
 {
