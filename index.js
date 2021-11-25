@@ -18,14 +18,14 @@ try {
   console.log("Connection error", error);
 }
 
-// app.use(cors({ credentials:true, origin:'http://localhost:3000' }));
+app.use(cors({ credentials:true, origin:'http://localhost:3000' }));
 app.use(cookieParser());
 app.use(bp.json())
 app.use(bp.urlencoded({ extended: true }))
 app.use(express.json());
 app.use(router);
 
-const port = 3000
+const port = 5000
 app.listen(port, () => {
   console.log(`listening at http://localhost:${port}`)
 })

@@ -1,5 +1,6 @@
 import {RequestToko} from "../models/RequestTokoModel.js"
 import {main} from "../middleware/Nodemailer.js"
+import { Sequelize } from "sequelize";
 
 export const getRequest = async(req,res) => {
     try{
@@ -41,7 +42,7 @@ export const addRequestToko = async(req,res) => {
 export const updateRequestStatus = async(req,res) => {
     const {id_request, status} = req.body; 
     try {
-        await RequestToko.update({status: status},{
+        await RequestToko.update({status: status, updated_at: Sequelize.fn('NOW')},{
             where:{
                 id_request : id_request
             }

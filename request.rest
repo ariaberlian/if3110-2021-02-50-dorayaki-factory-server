@@ -72,9 +72,9 @@ POST http://localhost:3000/update-request-status
 Content-Type: application/json
 
 {
-    "id_request" : 1,
+    "id_request" : 4,
     "status" : 0
 }
 
 ###
-GET http://localhost:3000/request-toko?ip=192.168.1.4
+GET http://localhost:3000/request-toko?ip=::1

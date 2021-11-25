@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 24, 2021 at 03:03 PM
+-- Generation Time: Nov 25, 2021 at 12:00 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -173,7 +173,32 @@ INSERT INTO `log_request` (`id_log`, `ip`, `endpoint`, `timestamp`) VALUES
 (71, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 21:03:18'),
 (72, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 21:03:18'),
 (73, '::1', 'http://localhost:8080/JayenInterface/services/VariantServiceImpl', '2021-11-22 21:03:21'),
-(74, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 21:03:21');
+(74, '::1', 'http://localhost:8080/JayenInterface/services/AddStokServiceImpl', '2021-11-22 21:03:21'),
+(75, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 09:20:10'),
+(76, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 09:22:16'),
+(77, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 09:22:49'),
+(78, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 09:59:30'),
+(79, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 09:59:36'),
+(80, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:00:22'),
+(81, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:00:46'),
+(82, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:01:11'),
+(83, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:19:18'),
+(84, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:19:19'),
+(85, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:19:20'),
+(86, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:19:20'),
+(87, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:19:21'),
+(88, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:19:21'),
+(89, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:19:21'),
+(90, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:19:21'),
+(91, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:19:21'),
+(92, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:19:22'),
+(93, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:19:22'),
+(94, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:20:20'),
+(95, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:20:32'),
+(96, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:20:34'),
+(97, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:22:58'),
+(98, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:23:02'),
+(99, '::1', 'http://localhost:8080/JayenInterface/services/SeeRequestStatusServiceImpl', '2021-11-25 10:40:21');
 
 -- --------------------------------------------------------
 
@@ -186,37 +211,38 @@ CREATE TABLE `request_toko` (
   `ip` text NOT NULL,
   `varian` varchar(255) NOT NULL,
   `jumlah_penambahan` int(11) NOT NULL,
-  `status` tinyint(1) DEFAULT NULL
+  `status` tinyint(1) DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `request_toko`
 --
 
-INSERT INTO `request_toko` (`id_request`, `ip`, `varian`, `jumlah_penambahan`, `status`) VALUES
-(1, '192.168.1.4', 'Rasa Pasir', 20, 0),
-(2, '::1', 'Rasa Pasir', 20, NULL),
-(3, '::1', 'Rasa Pasir', -90, NULL),
-(4, '::1', 'Rasa Pasir', 23, NULL),
-(5, '::1', 'Rasa Pasir', 135, NULL),
-(6, '::1', 'Rasa Pasir', 0, NULL),
-(7, '::1', 'Rasa Pasir', 32, NULL),
-(8, '::1', 'Rasa Pasir', -50, NULL),
-(9, '::1', 'Rasa Pasir', -40, NULL),
-(10, '::1', 'Rasa Pasir', -30, NULL),
-(11, '::1', 'Rasa Pasir', 224, NULL),
-(12, '::1', 'Rasa Pasir', 245, NULL),
-(13, '::1', 'Rasa Pasir', 123000, NULL),
-(14, '::1', 'Rasa Pasir', 224, NULL),
-(15, '::1', 'Rasa Pasir', 20, NULL),
-(16, '::1', 'Rasa Pasir', 1100, NULL),
-(17, '::1', 'Rasa Pasir', 2000, NULL),
-(18, '::1', 'Rasa Pasir', 3000, NULL),
-(19, '::1', 'Rasa Pasir', 4000, NULL),
-(20, '::1', 'Rasa Pasir', 2000, NULL),
-(21, '::1', 'Rasa Pasir', 3000, NULL),
-(22, '::1', 'Rasa Pasir', 1000, NULL),
-(23, '::1', 'Rasa Pasir', 3000, NULL);
+INSERT INTO `request_toko` (`id_request`, `ip`, `varian`, `jumlah_penambahan`, `status`, `updated_at`) VALUES
+(1, '192.168.1.4', 'Rasa Pasir', 20, 0, '2021-11-25 10:31:32'),
+(2, '::1', 'Rasa Pasir', 20, 1, '2021-11-25 10:31:32'),
+(3, '::1', 'Rasa Pasir', -90, NULL, '2021-11-25 10:31:32'),
+(4, '::1', 'Rasa Pasir', 23, 0, '2021-11-25 10:57:11'),
+(5, '::1', 'Rasa Pasir', 135, NULL, '2021-11-25 10:31:32'),
+(6, '::1', 'Rasa Pasir', 0, NULL, '2021-11-25 10:31:32'),
+(7, '::1', 'Rasa Pasir', 32, NULL, '2021-11-25 10:31:32'),
+(8, '::1', 'Rasa Pasir', -50, NULL, '2021-11-25 10:31:32'),
+(9, '::1', 'Rasa Pasir', -40, NULL, '2021-11-25 10:31:32'),
+(10, '::1', 'Rasa Pasir', -30, NULL, '2021-11-25 10:31:32'),
+(11, '::1', 'Rasa Pasir', 224, NULL, '2021-11-25 10:31:32'),
+(12, '::1', 'Rasa Pasir', 245, NULL, '2021-11-25 10:31:32'),
+(13, '::1', 'Rasa Pasir', 123000, NULL, '2021-11-25 10:31:32'),
+(14, '::1', 'Rasa Pasir', 224, NULL, '2021-11-25 10:31:32'),
+(15, '::1', 'Rasa Pasir', 20, NULL, '2021-11-25 10:31:32'),
+(16, '::1', 'Rasa Pasir', 1100, NULL, '2021-11-25 10:31:32'),
+(17, '::1', 'Rasa Pasir', 2000, NULL, '2021-11-25 10:31:32'),
+(18, '::1', 'Rasa Pasir', 3000, NULL, '2021-11-25 10:31:32'),
+(19, '::1', 'Rasa Pasir', 4000, NULL, '2021-11-25 10:31:32'),
+(20, '::1', 'Rasa Pasir', 2000, NULL, '2021-11-25 10:31:32'),
+(21, '::1', 'Rasa Pasir', 3000, NULL, '2021-11-25 10:31:32'),
+(22, '::1', 'Rasa Pasir', 1000, NULL, '2021-11-25 10:31:32'),
+(23, '::1', 'Rasa Pasir', 3000, NULL, '2021-11-25 10:31:32');
 
 -- --------------------------------------------------------
 
@@ -282,7 +308,7 @@ ALTER TABLE `resep`
 -- AUTO_INCREMENT for table `log_request`
 --
 ALTER TABLE `log_request`
-  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
 -- AUTO_INCREMENT for table `request_toko`

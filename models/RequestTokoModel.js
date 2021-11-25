@@ -21,6 +21,10 @@ export const RequestToko = db.define(
         status:{
             type:DataTypes.INTEGER,
             allowNull:true
+        },
+        updated_at:{
+            type: 'TIMESTAMP',
+            allowNull: true
         }
     },   
     {
