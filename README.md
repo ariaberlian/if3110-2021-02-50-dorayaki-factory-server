@@ -20,9 +20,9 @@ bahan_resep (bahan_baku) -> bahan_baku (nama_bahan)
 5. GET -> '/token' -> {accessToken}
 6. 
 # Pembagian Tugas
-1. Basisdata
-2. Authentification & Authorization
-3. Request add stock manager
-4. Recipe manager
-5. Material manager
-6. E-mail notification
+1. Basisdata: 13519115
+2. Authentification & Authorization: 13519115
+3. Request add stock manager: 13519115
+4. Recipe manager: 13519115
+5. Material manager: 13519075
+6. E-mail notification: 13519075
